@@ -1,4 +1,407 @@
-body {
-    background-color: aqua;
-    color: antiquewhite;
+* {
+    box-sizing: border-box;
 }
+
+.button{
+    position: relative;
+    display: flex;
+    margin: 40px;
+    align-items: center;
+    border: none;
+    overflow: hidden;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: blue;
+    color:black;
+    border-radius: 4px;
+    transition: background-color 250ms linear;
+}
+
+.button:hover,
+.button:focus{
+    background-color: crimson;
+}
+
+.button::after{
+   
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: darkgreen;
+    margin-left: 5px;
+    transform: translateY(0);
+    transition: transform 250ms linear;
+}
+
+.button::before{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  
+    transform: translateY(calc(-50% + 35px));
+    transition: transform  250ms linear;
+}
+
+.button:hover::before{
+    transform: translateY(-50%);
+}
+
+.button:hover::after{
+    transform: translateY(-35px);
+}
+
+.menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item{
+    outline: 2px solid red;
+    margin-right: 10px;
+}
+
+.menu-link{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu-link::after{
+position: absolute;
+left: 0;
+bottom: 0;
+display: block;
+content: "";
+width: 100%;
+height: 5px;
+background-color: blue;
+transform: scaleX(0);
+/* opacity: 0; */
+transition: transform 250ms ease-in-out;
+}
+
+.menu-link:hover::after{
+    /* opacity: 1; */
+    transform: scaleX(1);
+}
+
+ 
+
+
+
+
+
+
+/* .form {
+    width: 600px;
+    outline: 2px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background-color: teal;
+    color: #fff;
+    transition: transform 250ms linear;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+    font-size: 20px;
+}
+
+.form-field input::placeholder {
+    color: #CCC;
+    text-align:;
+} */
+
+
+.group {
+    margin-bottom: 20px;
+}
+
+.group-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.topic-options,
+.experience-options {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.topic-options li {
+ display: flex;
+ align-items: center;
+}
+
+/* .topic-options input[type="checkbox"] {
+   
+} */
+
+.topic-options label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.form .date {
+    border-color: red;
+    border-width: 5px;
+    border-radius: 4px;
+    padding: 20px 40px;
+    font-size: 20px;
+    color: blue;
+   
+}
+
+.comment {
+    padding: 8px;
+}
+
+/* ОФОРМЛЕННЯ ЗА СТАРИМ ЗРАЗКОМ */
+
+/* .form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    color: red;
+    transform: translateY(-50px);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: deeppink;
+}
+
+.form-input:focus ~ .icon {
+    background-color: darkgreen;
+}*/
+
+
+
+/* .form-field input{
+    width: 100%;
+} або робиш інпут і лейбл блочними елементами*/
+
+
+/* ЗА НОВИМ ЗРАЗКОМ LABEL I ICON СТОЯТЬ ПЕРЕД INPUT. АЛЕ ЦЕЙ ЗРАЗОК ПРАЦЮЄ НЕ У ВСІХ БРАУЗЕРАХ*/
+
+/* .form {
+    width: 600px;
+    outline: 2px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background-color: teal;
+    color: #fff;
+    transition: transform 250ms linear;
+    margin-bottom: 5px;
+}
+
+
+
+.form-field input {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+    font-size: 20px;
+}
+
+.form-field input::placeholder {
+    color: #CCC;
+    text-align: ;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: deeppink;
+} */
+
+/* .form-field:focus-within > .icon {
+    background-color: darkgreen;
+}
+
+.form-field:focus-within > .form-label {
+ transform: translateY(-50px);
+} */
+
+/* ЩОБ ЛЕЙБЛ НЕ ОПУСКАВСЯ ПРИ ЩЕЗАННІ ПЛЕЙСХОЛДЕРА МУСИМО  ДАТИ НАСТУПНЕ І ПОСТАВИТИ ЛЕЙБЛ ВСЕ ТАКИ ПІСЛЯ ІНПУТ */
+
+/* .form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-50px);
+} */
+
+/* Але В мене працювало і без цього селектора, можливо через те що я не змінювала розмітку */
+
+
+.form {
+    width: 600px;
+    outline: 2px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    }
+/* flex-direction: column; */
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background-color: teal;
+    color: #fff;
+    transition: transform 250ms linear;
+    margin-bottom: 5px;
+}
+
+
+
+.form-input {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    padding-left: 40px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+    font-size: 20px;
+}
+
+.form-input::placeholder {
+    color: #CCC;
+    /* text-align: ; */
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: deeppink;
+}
+
+.form-field:focus-within > .form-icon {
+    background-color: darkgreen;
+}
+
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+    transform: translateY(-50px);
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* Стандарт оформлення кастомних чекбоксів і кастомні радіокнопки */
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+   
+}
+
+/* В клас чекбокс можемо замість appearance кинути всі css властивості visually hidden */
+
+.checkbox {
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+
+}
+
+.checkbox-icon {
+   
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2a2a2a;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+   
+.checkbox:checked + .checkbox-icon {
+    background-color: blue;
+    background-image: url();
+    background-size: contain;
+    background-origin: border-box;
+    border-color: blue;
+}
+
+.checkbox-label {
+    transition: transform 250ms linear;
+}
+
+.checkbox:checked ~ .checkbox-label {
+    transform: translateX(20px);
+}
+    

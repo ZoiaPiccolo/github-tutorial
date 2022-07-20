@@ -6,10 +6,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Робота з терміналом</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css
+
+
+
+">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
+<button class="button">Touch me</button>
+<ul class="menu">
+    <li class="menu-item"><a href="" class="menu-link">Gallery</a></li>
+    <li class="menu-item"><a href="" class="menu-link">Gallery</a></li>
+    <li class="menu-item"><a href="" class="menu-link">Gallery</a></li>
+</ul>
 
+
+
+
+
+
+
+
+ <form class="form js-speaker-form" autocomplete="off">
+
+    <!-- Оформлення для старого і нового зразка -->
+    
+     <!-- <div class="form-field">
+         <input 
+         class="form-input"
+         type="text" 
+         name="user-name"
+         id="name"
+         autofocus 
+         placeholder="Zoia Khodan">
+         <label for="name" class="form-label">Name</label>
+         <span class="icon"></span>
+ </div>
+   
+<div class="form-field">
+    <input  class="form-input"type="tel" name="tel" id="tel" placeholder=" ">
+    <label for="tel"class="form-label">Phone</label>
+</div>
+
+    <div class="form-field">
+        <input  class="form-input"type="email" name="mail" id="mail" placeholder=" ">
+        <label for="mail"class="form-label">Email</label>
+        <span class="icon"></span>
+</div> -->
+
+
+<label class="form-field">
+    <input class="form-input"
+    type="text" name="user-name" 
+     autofocus
+     placeholder="Zoia Khodan">
+     <span class="form-label">NAME</span>
+     <span class="form-icon"></span>
+    </label>
+
+
+    <label class="form-field">
+        <input class="form-input" type="text" name="tel"  placeholder=" ">
+        <span class="form-label">Phone</span>
+        <span class="form-icon"></span>
+    </label>
+
+
+    <label class="form-field">
+        <input class="form-input" type="text" name="mail"  placeholder=" ">
+        <span class="form-label">Email</span>
+        <span class="form-icon"></span>
+    </label>
+
+
+    
+
+
+
+
+
+
+<div role="group" class="group">
+    <!-- <h1 class="group-title">Topic o the report</h1>
+    <ul class="topic-options">
+      <li>  <input type="checkbox" name="topic" value="html" id="html" checked>
+    <label  for="html" class="checkbox-label">HTML</label></li>
+    <li><input type="checkbox" name="topic" value="css" id="css" checked>
+    <label  for="css" class="checkbox-label">CSS</label></li>
+    <li><input type="checkbox" name="topic" value="js" id="js">
+    <label  for="js" class="checkbox-label">JS</label></li>
+</ul> -->
+
+
+
+
+<h1 class="group-title">Topic o the report</h1>
+<ul class="topic-options">
+    <li> 
+        <label for="html"class="checkbox-field">
+            <input type="checkbox" name="topic" value="html" checked class="checkbox">
+<span class="checkbox-icon"></span>
+ <span class="checkbox-label">HTML</span>
+        </label>
+    </li>
+    <li>
+        <label  class="checkbox-field">
+            <input type="checkbox" name="topic" value="css" checked class="checkbox">
+            <span class="checkbox-icon"></span>
+           
+        <span class="checkbox-label">CSS</span> 
+            
+        </label>
+    </li>
+    <li>
+        <label  class="checkbox-field">
+            <input type="checkbox" name="topic" value="js" class="checkbox">
+            <span class="checkbox-icon"></span>
+            
+        <span class="checkbox-label">JS</span>    
+        </label>
+    </li>
+</ul>
+</div>
+
+
+
+
+
+
+<div role="group" class="group">
+    <h1 class="group-title">Our level</h1>
+    <ul class="experience-options">
+     <li>  <input type="radio" name="experience" value="junior" id="junior" checked>
+    <label for="junior">Junior</label></li>
+   <li><input type="radio" name="experience" value="middle" id="middle">
+    <label for="middle">Middle</label></li>
+   <li> <input type="radio" name="experience" value="senior" id="senior">
+    <label for="senior">Senior</label></li>
+</ul>
+
+</div>
+   
+<div class="form-field">
+<label for="date">Date</label>
+<input type="datetime-local" name="date" id="date" min="2020-04-12T12:30" max="2022-04-12T13:30" class="date"></div>
+
+<div class="form-field"><label for="pdf">Download copy of file in pdf</label>
+<input type="file" name="pdf" id="pdf"></div>
+
+<div class="form-field"><label for="comment">Add comment</label>
+<textarea name="comment" id="comment" rows="8" placeholder="Add comment" class="comment"></textarea></div>
+
+<div class="form-field"><input type="checkbox" name="policy" id="policy">
+<label for="policy">Agree with all</label></div>
+
+    <button type="submit">Leave application</button>
+ </form>
+
+
+
+
+
+
+ <script>
+    (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+        })();
+ </script>
 </body>
 
 </html>
